@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shopitappd"
+description = "Method to connect Untappd and Shopify"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Richard Oberdieck", email = "richard@oberdieck.dk" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/RichardOberdieck/shopitappd/README.md"
+Issues = "https://github.com/RichardOberdieck/shopitappd/issues"
+Source = "https://github.com/RichardOberdieck/shopitappd"
+
+[tool.hatch.version]
+path = "shopitappd/__about__.py"
+
+[tool.hatch.build]
+include = [
+    "shopitappd/*.py"
+]
+
+[tool.hatch.envs.test]
+dependencies = [
+    "pytest",
+    "build",
+    "tqdm",
+    "pdbpp",
+    "pre-commit",
+    "black",
+    "flake8"
+]
+
+[tool.hatch.envs.test.scripts]
+tests = "pytest {args}"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["310", "311"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+    "shopitappd/__about__.py",
+    "tests/__init__.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+fail_under = 80
+
+[tool.hatch.envs.docs]
+skip-install = true
+dependencies = [
+    "mkdocs", "mkdocstrings[python]"
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean"
+serve = "mkdocs serve --dev-addr localhost:8000"
+
+[tool.hatch.envs.app.scripts]
+run = "python -m shopitappd.main"
+
+[tool.black]
+line_length = 120
+include = '\.pyi?$'
