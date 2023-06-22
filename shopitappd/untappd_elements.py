@@ -1,5 +1,5 @@
 import requests
-from product import Rating
+from shopitappd.product import Rating
 import os
 
 

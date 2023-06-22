@@ -50,7 +50,7 @@ dependencies = [
 ]
 
 [tool.hatch.envs.default.scripts]
-shopitappd = "python shopitappd/main.py"
+shopitappd = "python -m shopitappd.main"
 
 [tool.hatch.envs.test.scripts]
 tests = "pytest {args}"

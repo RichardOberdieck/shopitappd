@@ -1,6 +1,6 @@
 import requests
-from product import Product, Rating
-from shopify_header import get_header_for_shopify
+from shopitappd.product import Product, Rating
+from shopitappd.shopify_header import get_header_for_shopify
 from typing import List, Dict
 
 

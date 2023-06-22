@@ -3,7 +3,7 @@ import requests
 from typing import List, Dict
 from time import sleep
 from json import dumps
-from shopify_header import get_header_for_shopify
+from shopitappd.shopify_header import get_header_for_shopify
 
 
 class Rating(BaseModel):

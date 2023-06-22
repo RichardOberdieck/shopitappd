@@ -1,5 +1,5 @@
-from shopify_elements import get_products
-from untappd_elements import get_beer_ratings_from_untappd
+from shopitappd.shopify_elements import get_products
+from shopitappd.untappd_elements import get_beer_ratings_from_untappd
 from time import sleep
 from tqdm import tqdm
 

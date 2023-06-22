@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install hatch
         run: pip install hatch
+      - name: Run tests
+        run: hatch run test:tests
       - name: Run script
         run: hatch run shopitappd
         shell: sh
