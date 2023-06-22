@@ -48,6 +48,9 @@ dependencies = [
     "flake8"
 ]
 
+[tool.hatch.envs.default.scripts]
+shopitappd = "python shopitappd/main.py"
+
 [tool.hatch.envs.test.scripts]
 tests = "pytest {args}"
 
