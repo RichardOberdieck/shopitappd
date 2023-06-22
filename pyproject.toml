@@ -20,7 +20,8 @@ classifiers = [
 ]
 dependencies = [
     "requests",
-    "pydantic"
+    "pydantic",
+    "tqdm"
 ]
 dynamic = ["version"]
 
