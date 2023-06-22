@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install hatch
+        run: pip install hatch
       - name: Run script
         run: hatch run shopitappd
         shell: sh
