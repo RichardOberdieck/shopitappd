@@ -1,3 +1,5 @@
+[![Hos Rune logo](logo.svg)](logo.svg)
+
 # shopitappd
 
 [![Coverage Status](https://coveralls.io/repos/github/RichardOberdieck/shopitappd/badge.svg?branch=main)](https://coveralls.io/github/RichardOberdieck/shopitappd?branch=main)
