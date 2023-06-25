@@ -26,4 +26,4 @@ To run this for your own shop, you need three things:
 2. An `UNTAPPD_ACCESS_TOKEN`, which you get from the Untappd for Business part of the website
 3. Your `UNTAPPD_SHOP_ID`, which is the last part of the URL for your Untappd presence.
 
-In the code, the access tokens are injected as environment variables in the Github Actions and are stored as secrets. The `UNTAPPD_SHOP_ID` is stored in the [`constants.py](./shopitappd/constants.py).
+In the code, the access tokens are injected as environment variables in the Github Actions and are stored as secrets. The `UNTAPPD_SHOP_ID` is stored in the [constants.py](./shopitappd/constants.py).
