@@ -4,6 +4,7 @@ from typing import List, Dict
 from time import sleep
 from json import dumps
 from shopitappd.shopify_header import get_header_for_shopify
+from shopitappd.constants import SHOPIFY_API_VERSION
 
 
 class Rating(BaseModel):
@@ -62,10 +63,10 @@ class Product(BaseModel):
         requests.put(self.get_product_url(), headers=get_header_for_shopify(), json=data)
 
     def get_metafields_url(self):
-        return f"https://hos-rune.myshopify.com/admin/api/2023-01/products/{self.id}/metafields.json"
+        return f"https://hos-rune.myshopify.com/admin/api/{SHOPIFY_API_VERSION}/products/{self.id}/metafields.json"
 
     def get_product_url(self):
-        return f"https://hos-rune.myshopify.com/admin/api/2023-01/products/{self.id}.json"
+        return f"https://hos-rune.myshopify.com/admin/api/{SHOPIFY_API_VERSION}/products/{self.id}.json"
 
     def define_rating_dict(self):
         return {

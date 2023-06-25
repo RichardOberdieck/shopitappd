@@ -2,10 +2,11 @@ import requests
 from shopitappd.product import Product, Rating
 from shopitappd.shopify_header import get_header_for_shopify
 from typing import List, Dict
+from shopitappd.constants import SHOPIFY_API_VERSION
 
 
 def get_all_products_url(id: int) -> str:
-    return f"https://hos-rune.myshopify.com/admin/api/2023-01/products.json?since_id={id}"
+    return f"https://hos-rune.myshopify.com/admin/api/{SHOPIFY_API_VERSION}/products.json?since_id={id}"
 
 
 def get_products(beer_ratings: Dict[int, Rating]) -> List[Product]:
