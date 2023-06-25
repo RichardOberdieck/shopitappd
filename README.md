@@ -15,7 +15,7 @@ Currently, the repo covers two things:
 To run the code, execute:
 
 ```
-`hatch run shopitappd`
+hatch run shopitappd
 ```
 
 The repo is currently set up to run as a cron job using Github Actions. See the corresponding [.yml file](./.github/workflows/schedule.yml) for details.
