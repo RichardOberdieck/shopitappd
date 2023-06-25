@@ -19,7 +19,9 @@ jobs:
       - name: Install hatch
         run: pip install hatch
       - name: Run tests
-        run: hatch run test:tests
+        run: hatch run test:cov
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2
       - name: Run script
         run: hatch run shopitappd
         shell: sh
