@@ -19,9 +19,9 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-    "requests",
-    "pydantic",
-    "tqdm"
+    "requests==2.31.0",
+    "pydantic==1.10.9",
+    "tqdm==4.65.0"
 ]
 dynamic = ["version"]
 
