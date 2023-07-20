@@ -45,6 +45,10 @@ def get_beer_ratings_from_untappd():
         beer_tag = get_beer_specific_tag(href)
         rating, rating_count = get_rating_info_from_tag(beer_tag)
 
+        # Skip if no rating yet
+        if rating < 1 or rating_count < 1:
+            continue
+
         untappd_ratings[uid] = Rating(rating=rating, rating_count=rating_count)
 
     return untappd_ratings
